@@ -1,0 +1,45 @@
+A perfectly symmetric simple pendulum with no damping due to drag would have the 
+property that $\theta(t) = -\theta(t + T/2)$, for all time $t$ where $T$ is the 
+period of oscillation. Any deviation from this equality implies asymmetry within 
+the system. To quantify the asymmetry of the pendulum used to collect the data 
+in this report, this equality is tested at each point in time $t$. The idea is 
+as follows: the first 100 data points\footnote{The reasoning for only using the 
+first 100 data points is because the symmetry of the system is entirely 
+determined after undergoing a single full oscillation anyways. The first 100 
+time steps include approximately four full oscillations of the pendulum, and 
+thus this is sufficient to accurately estimate the observed level of symmetry.} 
+of a single data set is considered and fitted with a function of the form of 
+Eq.(\ref{theta equation}), and as such, an estimation of the period of 
+oscillation over this set of data is obtained. This functional form is then 
+used to obtain residuals between the functional form and the recorded data, 
+values of which can then be averaged to obtain an average \textit{absolute} 
+residual value. Now shift the functional form $\theta(t)$ by an amount $T/2$ 
+to the left, and multiply by -1: $\theta(t) \mapsto -\theta(t + T/2)$. For a 
+perfectly symmetric pendulum, the average value of absolute residuals between 
+the collected data and the \emph{shifted} functional form should be precisely 
+equal. Hence, the relative change between these two averages provides a 
+quantitative estimate of the \emph{asymmetry} of the pendulum, and subtracting 
+this value from 1 provides a quantitative estimate of the \emph{symmetry} of 
+the pendulum. \\[0.20cm]
+
+Plotted in Figures \ref{symmetry}, \ref{symmetry_residual} are the first 100 
+time steps of the motion of pendulum with a length $L = 0.1\text{m}$, a mass 
+of $m = 0.1\text{kg}$ and initial angular amplitude $\theta_0 = 0.22\text{rads}$ 
+plotted alongside a optimized functional form, and the associated residual 
+values respectively. Plotted in Figure \ref{symmetry_shifted} is the same 
+collected data, only plotted alongside the same functional form, but shifted 
+to the left by a time $T/2 = (0.360\pm 0.002)\text{s}$. Finally, plotted in 
+Figure \ref{symmetry_shifted_residual} is the residuals of the collected data 
+and the \emph{shifted} functional form. Visually, Figures \ref{symmetry} and 
+\ref{symmetry_shifted} are extremely similar, and likewise for Figures 
+\ref{symmetry_residual} and \ref{symmetry_shifted_residual} -- this speaks 
+to the high level of symmetry present in the pendulum. In fact, up to 
+uncertainty in the angular amplitude $\theta$, the pendulum is perfectly 
+symmetric. With that being said, the average (absolute) residual value present 
+in Figure \ref{symmetry_residual} is 0.0048, while that of Figure 
+\ref{symmetry_shifted_residual} is 0.0049, providing a relative difference of 
+\[C = \frac{0.0049 - 0.0048}{0.0049} = 0.013\]
+In other words, the pendulum is $1.3\%$ asymmetric or equivalently, 
+$98.7\%$ symmetric: a fairly high level of symmetry. Reasons for any asymmetry 
+at all are attributed to the effect of drag and hence the exponential decay of 
+the envelope of the collected data.\\[0.20cm]

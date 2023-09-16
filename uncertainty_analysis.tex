@@ -1,0 +1,38 @@
+Multiple sources of uncertainty come into play in the numerical analysis of 
+this pendulum. Minor contributions arise from deviations in the length of 
+the string throughout the motion of the mass. As to ensure a sufficiently 
+large uncertainty is propagated for all combinations of the independent variables 
+(in particular paying attention to the proportionality between the magnitude of 
+the stretching and the mass of the object), it was measured that the string 
+stretched a distance $2.00\text{mm}$ between a $20.00\text{g}$ mass (as to keep 
+the string taught) and the $500.00\text{g}$ mass (the largest mass used), and 
+therefore an uncertainty value of $2.00\text{m}$ is placed on the length of 
+the string $L$. Other uncertainties may arise from motion of the pivot point, 
+however the system used two large $30\text{kg}$ stands with broad bases, and 
+no motion of either pivot point was visible throughout the experiment. As such, 
+no additional uncertainty is propagated from this plausible source of error.\\[0.10cm]
+
+The largest source of uncertainty, however, arises from within the tracking 
+methods themselves. As briefly discussed in the experimental procedure section 
+of the report, Tracker pinpoints a \emph{single} pixel on each frame, rather 
+then an entire object. Efforts to reduce this source of uncertainty were deployed 
+by placing a small piece of tape at the centre of mass (from the perspective of the 
+camera), however the size of the tape itself is certainly non-negligible. The same 
+size of tape is used in each set of data, the diameter of which is $0.006\text{m}$.
+ It is assumed that the geometric centre of the tape is recorded on each frame, 
+ thus resulting in an uncertainty value of $0.003\text{m}$ in both the $x$ and $y$ 
+ coordinates. Using this value, the uncertainty in the angle $\theta$ is propagated 
+ using Eq.(\ref{eq: uncertainty}). Given values of $x$ and $y$, the angle $\theta$ 
+ is then given by $\theta(x, y) = \ell \arctan\left(\frac{x}{y} \right)$, so that 
+ the uncertainty in $\theta$ is given by;
+
+\begin{equation} \label{eq: theta_unc}
+    \sigma_\theta = \ell\sqrt{\frac{x^2\sigma_x^2 + y^2\sigma_y^2}{(x^2 + y^2)^2}} = \ell\sqrt{\frac{(0.003\text{m})^2}{x^2 + y^2}}
+\end{equation}
+
+Note that the uncertainty in the value $\ell$ here is ignored, and such an 
+approximation is justified since the only term involving such is $\sigma_\ell^2/\ell^2 \approx 0$. 
+The error is applied to every data point in every data set, and has the largest 
+magnitude over all other uncertainties making the tracking methods the largest 
+source of uncertainty.\\[0.20cm]
+

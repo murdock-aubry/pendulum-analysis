@@ -1,0 +1,23 @@
+The pendulum is a thoroughly studied and well understood dynamical system which acts as a crucial learning experience for young physicists. This model provides an opportunity to further grasp and understand the importance of the small angle approximation not only in the physical sense, but also as a strong mathematical tool which can commonly be deployed to greatly simplify a problem. To set the stage for the theoretical framework which follows, let a point particle of mass $m$ be suspended from a immovable pivot point by a massless string of length $\ell$ with negligible thickness. Define the value $\theta$ to be the angle that the string makes with the vertical line which passes through the pivot point. A schematic diagram of the system is included in Figure \ref{3dschematic}. The forces acting on the mass are the force due to gravity, the tangential component of such being given by $F_g = -mg\sin\theta$, as well as force due to wind resistance; drag. The magnitude of the drag force is proportional to the (tangential) velocity of the mass (which in this case is $\ell\Dot{\theta}$): $F_d = \gamma\ell\Dot{\theta}$, where $\gamma$ is the constant of proportionality called the drag coefficient \cite{drag}. Then Newton's second law provides;
+\begin{equation} \label{eq: ode}
+  m\ell\Ddot{\theta} = -mg\sin\theta - \gamma\ell\Dot{\theta}
+\end{equation}
+Under the small angle approximation $\sin\theta \approx \theta$, Eq.(\ref{eq: ode}) becomes
+\begin{equation} \label{ode small}
+  \Ddot{\theta} + \frac{\gamma}{m}\Dot{\theta} + \omega^2\theta = 0
+\end{equation}
+where $\omega = \sqrt{g/\ell}$. This is the equation that governs the motion of the damped pendulum under the small angle approximation. The general solution to Eq.(\ref{ode small}), while stipulating that $\Dot{\theta}(0) = 0$ and that the drag force is sufficiently small (namely, $(\gamma^2/m^2) << 1$), is given by
+\begin{equation} \label{theta equation}
+  \theta(t) = \theta_0 e^{-t/\tau}\cos\left(\omega't \right) =  \theta_0 e^{-t/\tau}\cos\left(\frac{2\pi t}{T} \right)
+\end{equation}
+where $\omega' = \sqrt{\frac{g}{\ell} - \frac{\gamma^2}{2m^2}}$; the angular frequency, and $\tau = m/\gamma$; the decay coefficient \cite{uoft}. This implies that the rate of decay is independent of the initial amplitude, and remains constant in time. It is important to notice that a large value of $\gamma$ results in a quickly decaying exponential $e^{-t/\tau}$, which aligns with physical intuition. Again assuming $\gamma^2 << m^2$, this provides that $\omega' \approx \omega$. Using the fact that the angular frequency is related to the period of oscillation by $\omega = 2\pi/T$, we can set 
+\begin{equation} \label{period}
+  T = 2\pi\sqrt{\frac{\ell}{g}} \approx 2\sqrt{L + D}
+\end{equation}
+Where we set $\ell = L + D$, $L$ being the length of the string and $D$ being the distance from the centre of mass to the point where the string is attached (which is non-zero for a physical pendulum). The relationship given by Eq.(\ref{period}) directly implies that the period of oscillation is independent of $m$ and $\theta_0$, and stays constant throughout time. The goal of this paper is to test the accuracy of Eq.(3) and Eq.(4), analyze the dependence of the decay coefficient $\tau$ on $m, \ell$, and $\theta_0$, and estimate a domain on which the small angle approximation remains valid through the use of a physical damped pendulum. Various physical limitations certainly arise in the construction of the pendulum, and as such, the symmetry of the pendulum is to be quantified. These dependencies will be quantified by constructing a physical pendulum, the motion of which will be tracked and analyzed over time. From the collected data, estimates on the various unknown quantities which appear in Eq.(\ref{theta equation}) will be derived, from which the validity of the theoretical claims mentioned above will be tested. \\[0.20cm]
+
+Finally, various uncertainty values will be computed from the collected data, all of which are propagated using the uncertainties in the dependent and independent variables alike. The uncertainty value, $\sigma_F$, of a function $F(x, y)$ is given by
+\begin{equation}\label{eq: uncertainty}
+  \sigma_F^2 = \left(\frac{\dell F}{\dell x} \right)\sigma_x^2 + \left(\frac{\dell F}{\dell y} \right)\sigma_y^2 + 2\frac{\dell F}{\dell x}\frac{\dell F}{\dell y}\sigma_{xy}
+\end{equation}
+Where $\sigma_x$ is the uncertainty in $x$ and likewise for $\sigma_y$ \cite{uncertainty}. Note that $\sigma_{xy} = \sigma_x\sigma_y\rho_{xy}$ is the \emph{covariance} between the two values $x$ and $y$, and $\rho_{xy}$ the correlation between $x$ and $y$. For the purposes of this experiment, the correlation is always taken to be 0. \\[0.20cm]

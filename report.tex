@@ -1,0 +1,58 @@
+\documentclass{article}
+\usepackage{import}
+\usepackage{preamble}
+
+\usepackage[backend=biber]{biblatex}
+\addbibresource{bib.bib}
+
+\begin{document}
+
+\newtitle{Pendulum Analysis}
+
+
+\noindent\Large{\textbf{Abstract}}\normalsize\\
+
+\input{abstract.tex} \\
+
+\noindent\Large{\textbf{Introduction}}\normalsize\\
+
+\input{introduction.tex}
+
+\noindent\Large{\textbf{Experimental Procedure}}\normalsize\\
+
+\input{procedure.tex}
+
+\noindent\Large{\textbf{Uncertainty Analysis}}\normalsize\\
+
+\input{uncertainty_analysis.tex}
+
+\noindent\Large{\textbf{Results}}\normalsize\\
+
+\noindent\large{\textbf{Period of Oscillation $T$}}\normalsize\\
+\input{period.tex}
+
+\noindent\large{\textbf{Decay Constant $\tau$}}\normalsize\\
+\input{decay_constant.tex}
+
+
+\noindent\large{\textbf{Symmetry}}\normalsize\\
+\input{symmetry.tex}
+
+
+\noindent\large{\textbf{Small Angle Approximation}}\normalsize\\
+\input{small_angle.tex}
+
+
+\noindent\Large{\textbf{Conclusion}}\normalsize\\
+\input{conclusion.tex}
+
+\pagebreak
+
+\printbibliography
+
+\noindent\Large{\textbf{Appendix}}\normalsize\\
+\input{appendix.tex}
+
+
+
+\end{document}
